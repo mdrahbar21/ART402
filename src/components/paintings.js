@@ -35,7 +35,7 @@ const paintings = [
   {
     image: burning,
     title: "Burning of the Houses of Lords and Commons",
-    painter: "Jospeh William Mallord Turner",
+    painter: "Joseph William Mellord Turner",
     year: "1834-35",
     medium: "Oil on fabric",
   },
