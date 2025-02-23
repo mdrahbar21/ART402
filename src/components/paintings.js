@@ -140,7 +140,7 @@ const paintings = [
   {
     image: dream,
     title: "The Dream",
-    painter: "Henry Rousseau",
+    painter: "Henri Rousseau",
     year: "1910",
     medium: "Oil on canvas",
   },
