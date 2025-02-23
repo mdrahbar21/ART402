@@ -30,7 +30,7 @@ export default function Midsem() {
     setShuffledIndexes(shuffled);
   }, []);
 
-  const handleSubmit = () => {
+  const handleNext = () => {
     if (shuffledIndexes.length === 0) return;
 
     const currentPainting = paintings[shuffledIndexes[currentIndex]];
@@ -41,21 +41,20 @@ export default function Midsem() {
       answers.year === currentPainting.year &&
       answers.medium.toLowerCase() === currentPainting.medium.toLowerCase()
     ) {
-      setScore(score + 1);
+      setScore((prevScore) => prevScore + 1);
       setFeedback("Correct! 🎉");
     } else {
-      setFeedback("Wrong! ❌");
+      setFeedback(
+        `Wrong! ❌ The correct answer is:\nTitle: ${currentPainting.title}\nPainter: ${currentPainting.painter}\nYear: ${currentPainting.year}\nMedium: ${currentPainting.medium}`
+      );
     }
 
-    setTimeout(() => {
-      if (currentIndex < shuffledIndexes.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-        setAnswers({ title: "", painter: "", year: "", medium: "" });
-        setFeedback("");
-      } else {
-        alert(`Quiz finished! Your score: ${score}/${paintings.length}`);
-      }
-    }, 2000);
+    if (currentIndex < shuffledIndexes.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setAnswers({ title: "", painter: "", year: "", medium: "" });
+    } else {
+      alert(`Quiz finished! Your score: ${score}/${paintings.length}`);
+    }
   };
 
   return (
@@ -96,10 +95,14 @@ export default function Midsem() {
                 setAnswers({ ...answers, medium: e.target.value })
               }
             />
-            <Button className="mt-4" onClick={handleSubmit}>
-              Submit
+            <Button className="mt-2" onClick={handleNext}>
+              Next
             </Button>
-            {feedback && <p className="mt-2 font-semibold">{feedback}</p>}
+            {feedback && (
+              <p className="mt-2 font-semibold whitespace-pre-line">
+                {feedback}
+              </p>
+            )}
           </CardContent>
         </Card>
       )}
