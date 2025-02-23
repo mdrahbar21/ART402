@@ -45,7 +45,7 @@ export default function Midsem() {
       setFeedback("Correct! 🎉");
     } else {
       setFeedback(
-        `Wrong! ❌ The correct answer is:\nTitle: ${currentPainting.title}\nPainter: ${currentPainting.painter}\nYear: ${currentPainting.year}\nMedium: ${currentPainting.medium}`
+        `Wrong! ❌ The correct answer is:\nTitle: ${currentPainting.title}\n Artist: ${currentPainting.painter}\n Year: ${currentPainting.year}\n Medium: ${currentPainting.medium}`
       );
     }
 
@@ -58,8 +58,8 @@ export default function Midsem() {
   };
 
   return (
-    <div className="flex flex-col items-center p-6">
-      <h1 className="text-2xl font-bold mb-4">Painting Quiz</h1>
+    <div className="flex flex-col items-center p-6 mt-0 py-0">
+      <h1 className="text-2xl font-bold mb-4">ART Knowledge Check</h1>
       {shuffledIndexes.length > 0 && (
         <Card className="p-4">
           <CardContent className="flex flex-col items-center">
@@ -70,21 +70,21 @@ export default function Midsem() {
               whileHover={{ scale: 1.05 }}
             />
             <Input
-              placeholder="Title of Painting"
+              placeholder="Title of Art"
               value={answers.title}
               onChange={(e) =>
                 setAnswers({ ...answers, title: e.target.value })
               }
             />
             <Input
-              placeholder="Painter's Name"
+              placeholder="Artist's Name"
               value={answers.painter}
               onChange={(e) =>
                 setAnswers({ ...answers, painter: e.target.value })
               }
             />
             <Input
-              placeholder="Year of Painting"
+              placeholder="Year of Art"
               value={answers.year}
               onChange={(e) => setAnswers({ ...answers, year: e.target.value })}
             />
