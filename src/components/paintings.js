@@ -90,7 +90,7 @@ const paintings = [
   },
   {
     image: medusa,
-    title: "The Raft of the Medusa",
+    title: "Raft of the Medusa",
     painter: "Theodore Gericault",
     year: "1819",
     medium: "Oil on canvas",
