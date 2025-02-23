@@ -125,7 +125,7 @@ const paintings = [
   },
   {
     image: sainte,
-    title: "Terrace at Sainte-Adresse",
+    title: "Terrace at Sainte Adresse",
     painter: "Claude Monet",
     year: "1866-67",
     medium: "Oil on canvas",
