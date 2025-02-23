@@ -27,14 +27,14 @@ import {
 const paintings = [
   {
     image: bull,
-    title: "The Bull",
+    title: "Bull's head",
     painter: "Pablo Picasso",
     year: "1943",
     medium: "Assemblage of bicycle saddle and handlebars",
   },
   {
     image: burning,
-    title: "The Burning of the Houses of Lords and Commons",
+    title: "Burning of the Houses of Lords and Commons",
     painter: "Jospeh William Mallord Turner",
     year: "1834-35",
     medium: "Oil on fabric",
