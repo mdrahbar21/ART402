@@ -36,8 +36,8 @@ project-root/
 
 1. **Clone the Repository**
 ```sh
-git clone https://github.com/your-username/painting-quiz-app.git
-cd painting-quiz-app
+git clone https://github.com/mdrahbar21/ART402.git
+cd ART402
 ```
 
 2. **Install Dependencies**
