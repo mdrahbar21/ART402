@@ -59,7 +59,7 @@ export default function Midsem() {
 
   return (
     <div className="flex flex-col items-center p-6 mt-0 py-0">
-      <h1 className="text-2xl font-bold mb-4">ART Knowledge Check</h1>
+      <h1 className="text-2xl font-bold mb-4">MODERN ART</h1>
       {shuffledIndexes.length > 0 && (
         <Card className="p-4">
           <CardContent className="flex flex-col items-center">
