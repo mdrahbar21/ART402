@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ART402 Artist Pratice",
+  title: "MODERN ART",
   description: "Developed by Md Rahbar, 210601",
 };
 
